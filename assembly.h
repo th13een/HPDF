@@ -18,8 +18,7 @@ class Assembly{
 public:
   Assembly(std::size_t bufferSize,std::string fdName, int pollTimeout);
   void start();
-  void getProcess(std::string name);
-  void getResource(std::string name);
+  int sendProcess(std::string name);
   void shutdown();
   
   
