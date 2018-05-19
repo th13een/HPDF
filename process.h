@@ -5,6 +5,24 @@
  * connection it simply closes the connection and joins the thread. The idea is that communication between any two processes has both processes create a new thread each
  * to facilitate the communication. This becomes impractical if a process needs to be connected to by many other processes. In this case, shared memory can be used.
  */
-
+#include <iostream>
 #include "connector.h"
+#include <map.h>
+
+class Process{
+ public:
+  Process(std::string name);
+  void run();
+  ~Process();
+ private:
+  std::string name;
+  void conn2asmbl();
+  void conn2proc(std::string procnm);
+  int main_sd;
+  bool exit;
+  map<std::string procnm, int sd> proc_sds;
+  
+
+
+};
 
