@@ -11,18 +11,17 @@
 
 class Process{
  public:
-  Process(std::string name);
+  Process(std::string name, std::string asmblnm);
   void run();
   ~Process();
  private:
   std::string name;
+  std::string asmblnm;
   void conn2asmbl();
   void conn2proc(std::string procnm);
   int main_sd;
   bool exit;
   map<std::string procnm, int sd> proc_sds;
   
-
-
 };
 
