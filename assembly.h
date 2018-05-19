@@ -7,12 +7,10 @@
 #ifndef ASSEMBLY_H
 #define ASSEMBLY_H
 
-#include <iostream>
 #include <map>
 #include <thread>
-#include <sys/socket.h>
-#include <sys/un.h>
-#include <poll.h>
+#include "connector.h"
+
 
 class Assembly{
 public:

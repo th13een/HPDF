@@ -6,9 +6,5 @@
  * to facilitate the communication. This becomes impractical if a process needs to be connected to by many other processes. In this case, shared memory can be used.
  */
 
-#include <iostream>
-using namespace std;
+#include "connector.h"
 
-int main(){
-  cout << "Hello, World!" << endl;
-}

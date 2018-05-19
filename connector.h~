@@ -1,0 +1,12 @@
+/// Connector is a wrapper class that handles (UNIX) socket communication
+#ifndef CONNECTOR_H
+#define CONNECTOR_H
+
+class Connector{
+ public:
+  Connector(std::string type); // 
+}
+
+
+
+#endif //CONNECTOR_H
