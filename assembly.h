@@ -11,22 +11,29 @@
 #include <thread>
 #include "connector.h"
 
+#define MAINBUFFLEN 50
 
-class Assembly{
+
+class Assembly {
 public:
-  Assembly(std::size_t bufferSize,std::string fdName, int pollTimeout);
-  void start();
-  int sendProcess(std::string name);
-  void shutdown();
-  
-  
+    Assembly(std::string type, std::string glblname, int pollTimeout);
+
+    void start();
+
+    int sendProcess(std::string name);
+
+    void shutdown();
+
+
 private:
-  std::size_t bufferSize;
-  std::string fdName;
-  int timeout;
-  std::map<std::string,std::thread> threads;
-  std::map<std::string,int> sockets;
-  bool toShutdown;
+    std::size_t bufferSize;
+    std::string fdName;
+    int timeout;
+    std::map<std::string, std::thread> threads;
+    std::map<std::string, int> sockets;
+    bool toShutdown;
+
+};
 
 
 #endif

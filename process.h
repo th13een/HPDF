@@ -7,21 +7,22 @@
  */
 #include <iostream>
 #include "connector.h"
-#include <map.h>
+#include <map>
+
+#define MAINBUFFLEN 50
 
 class Process{
  public:
   Process(std::string name, std::string asmblnm);
   void run();
-  ~Process();
  private:
+  Client sock_asm;
   std::string name;
   std::string asmblnm;
   void conn2asmbl();
   void conn2proc(std::string procnm);
-  int main_sd;
   bool exit;
-  map<std::string procnm, int sd> proc_sds;
+  std::map<std::string, int> proc_sds;
   
 };
 

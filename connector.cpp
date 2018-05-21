@@ -3,6 +3,7 @@
 char* str2ch(std::string s){
   int n = s.length();
   char *ch = (char*)malloc(sizeof(char) * (n+1));
+  ch[n]= 0;
   strcpy(ch,s.c_str());
   return ch;
 }

@@ -36,7 +36,7 @@ class Connector {
   std::string buffer;
 };
 
-class Server : Connector {
+class Server : public Connector {
  public:
   Server(std::string type, int bufflen, std::string glblName);
   void listenSock(int numconns);
@@ -54,7 +54,7 @@ class Server : Connector {
   
 };
 
-class Client : Connector {
+class Client : public Connector {
  public:
   Client(std::string type, int bufflen);
   void connect_STREAM(std::string srvr_glblnm);
